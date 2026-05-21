@@ -12,7 +12,7 @@
 3. Review commit history and branch naming.
 
 ## Checklist
-- [ ] Worked on a separate branch
-- [ ] Used meaningful commit messages
-- [ ] README updated according to assignment
-- [ ] I understand the workflow I submitted
+- [x] Worked on a separate branch
+- [x] Used meaningful commit messages
+- [x] README updated according to assignment
+- [x] I understand the workflow I submitted

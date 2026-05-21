@@ -19,11 +19,11 @@ Date: 21/05/2026
 Hiểu về basic git commands
 Hiểu về github workflow
 ## Khái niệm Git/Github đã hiểu:
-####-git: là hệ thống quản lí phân tán, chạy chủ yếu trên local
-####-github: nơi lưu trữ repo git trên cloud, hỗ trợ cộng tác
-####-remote: repository đặt trên github, thường mặc định là origin
-####-PR: đưa thay đổi từ branch vào nhánh đích, nơi mentor review code&feedback
+- git: là hệ thống quản lí phân tán, chạy chủ yếu trên local
+- github: nơi lưu trữ repo git trên cloud, hỗ trợ cộng tác
+- remote: repository đặt trên github, thường mặc định là origin
+- PR: đưa thay đổi từ branch vào nhánh đích, nơi mentor review code&feedback
 ## Workflow
 Task->Create->branch->Edit files->Add File->Commit->Push->Open Pull Request->Review->Merge
-##Notes / Questions
+## Notes / Questions
 N/A

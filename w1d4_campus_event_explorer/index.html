@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Event Explorer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <header class="top-navbar">
+      <a href="#" class="brand">Campus Event Explorer</a>
+
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="#" class="nav-link active" data-page="explore">Explore</a>
+        <a href="#" class="nav-link" data-page="my-events">My Events</a>
+        <a href="#" class="nav-link" data-page="help">Help</a>
+      </nav>
+      <button class="profile-button" aria-label="User profile">
+       <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+  <circle cx="12" cy="7" r="4"></circle>
+</svg>
+      </button>
+    </header>
+
+    <main class="page">
+      <section id="networkAlert" class="alert-box" hidden>
+        <span class="alert-icon">!</span>
+        <div class="alert-content">
+          <strong>Form validation error</strong>
+          <ul id="alertMessage" class="alert-error-list"></ul>
+        </div>
+
+        <button id="closeAlertBtn" class="alert-close" aria-label="Close alert">
+          ×
+        </button>
+      </section>
+
+      <section class="main-layout">
+        <div class="content-column">
+          <section class="hero-card">
+            <h1>Find Your Next Campus Adventure</h1>
+
+            <div class="search-bar">
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="Search events, clubs, or venues..."
+              />
+              <button id="searchBtn" class="search-button">
+                <span>⌕</span>
+                Search
+              </button>
+            </div>
+
+            <div class="category-chips" aria-label="Category filters">
+              <button class="chip active" data-category="All">All</button>
+              <button class="chip" data-category="Social">Social</button>
+              <button class="chip" data-category="Academic">Academic</button>
+              <button class="chip" data-category="Sports">Sports</button>
+              <button class="chip" data-category="Workshop">Workshop</button>
+            </div>
+          </section>
+
+          <section class="events-section">
+            <div class="section-title-row">
+              <h2>Upcoming Events</h2>
+              <a href="#" class="calendar-link">View Calendar &#128197</a>
+            </div>
+
+            <div id="feedbackMessage" class="feedback-message" hidden></div>
+
+            <div id="loadingState" class="state-box" hidden>
+              Loading campus events...
+            </div>
+
+            <div id="emptyState" class="state-box" hidden>
+              No events found. Try another search or category.
+            </div>
+
+            <div id="eventGrid" class="event-grid"></div>
+          </section>
+        </div>
+
+        <aside class="quick-add-card">
+          <div class="quick-add-heading">
+            <span class="plus-icon">＋</span>
+            <h2>Quick Add Event</h2>
+          </div>
+
+          <form id="eventForm" novalidate>
+            <div class="form-group">
+              <label for="eventName">Event Name</label>
+              <input
+                id="eventName"
+                type="text"
+                placeholder="e.g. Study Group"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="eventCategory">Category</label>
+              <select id="eventCategory">
+                <option value="Academic">Academic</option>
+                <option value="Social">Social</option>
+                <option value="Sports">Sports</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Discussion">Discussion</option>
+                <option value="Tech">Tech</option>
+              </select>
+            </div>
+
+            <div class="date-time-row">
+              <div class="form-group">
+                <label for="eventDate">Date</label>
+                <input id="eventDate" type="date" />
+              </div>
+
+              <div class="form-group">
+                <label for="eventTime">Time</label>
+                <input id="eventTime" type="time" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="eventLocation">Location</label>
+              <input
+                id="eventLocation"
+                type="text"
+                placeholder="Room/Building"
+              />
+            </div>
+
+            <div id="formErrors" class="form-errors" hidden></div>
+
+            <button type="submit" class="create-button">Create Event</button>
+          </form>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
